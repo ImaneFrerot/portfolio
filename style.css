@@ -563,3 +563,21 @@ h1, h2, h3 {
     text-transform: uppercase; /* Optionnel : pour un look plus "édito" */
     letter-spacing: 1px;
 }
+
+/* Style pour les liens de la navigation */
+.nav-links a {
+    font-family: 'Playfair Display', serif; /* Applique la police du logo */
+    font-weight: 400;                       /* Poids normal */
+    text-transform: uppercase;              /* Garde les majuscules si tu aimes ce style */
+    letter-spacing: 1px;                    /* Espace un peu les lettres pour l'élégance */
+    text-decoration: none;
+    color: #fff;                            /* À ajuster selon ta couleur de texte */
+    transition: 0.3s;
+}
+
+/* Optionnel : si tu veux que ce soit en italique comme une partie du logo */
+/*
+.nav-links a {
+    font-style: italic;
+}
+*/
