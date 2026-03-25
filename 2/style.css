@@ -1,0 +1,541 @@
+/* --- VARIABLES DE COULEURS ET POLICES --- */
+:root {
+    --bg-dark: #141414; /* Noir profond */
+    --bg-light: #f6f3f0; /* Beige très clair */
+    --bg-silk: #e8d9d5; /* Rose poudré / soyeux */
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --accent: #b08d82; /* Cuivre / Or rose pour les détails */
+    
+    --font-title: 'Playfair Display', serif;
+    --font-text: 'Montserrat', sans-serif;
+}
+
+/* --- RESET GLOBAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-text);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- UTILITAIRES DE SECTIONS --- */
+.section {
+    padding: 100px 10vw;
+}
+.section-light { background-color: var(--bg-light); }
+.section-dark { background-color: var(--bg-dark); color: var(--text-light); }
+.section-silk { 
+    background: linear-gradient(135deg, #e8d9d5 0%, #f4eae7 50%, #e8d9d5 100%);
+}
+
+.center { text-align: center; }
+.white { color: var(--text-light); }
+
+/* --- TYPOGRAPHIE --- */
+h1, h2, h3 {
+    font-family: var(--font-title);
+    font-weight: 400;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-title-left {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.italic-velvet {
+    font-style: italic;
+    color: var(--accent);
+}
+
+/* --- NAVIGATION --- */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--bg-dark);
+    padding: 20px 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--text-light);
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.nav-links a {
+    color: #a0a0a0;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-light);
+}
+
+/* --- HERO SECTION (Accueil) --- */
+/* --- IMAGE DE FLEURS (Accueil) --- */
+.hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-flower-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 65vh; /* S'assure que l'image ne dépasse pas de l'écran */
+    object-fit: contain;
+    opacity: 0.85; /* Rend les fleurs légèrement douces */
+    /* Petite animation de flottement élégante */
+    animation: floatImage 6s ease-in-out infinite;
+}
+
+/* L'animation qui fait flotter les fleurs */
+@keyframes floatImage {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10vw;
+    background: linear-gradient(120deg, #ebdcd8 0%, #f5ece9 50%, #dfcdc8 100%);
+}
+
+.giant-title {
+    font-size: 4rem;
+    line-height: 1.1;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.hero-sub {
+    font-size: 1.2rem;
+    font-family: var(--font-title);
+    font-style: italic;
+    color: var(--text-dark);
+}
+
+/* --- BANNIÈRE TECH --- */
+.tech-banner {
+    background-color: #e5d7d2;
+    padding: 20px 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.tech-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.tech-icons span {
+    font-family: var(--font-title);
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    color: #555;
+}
+
+/* --- À PROPOS --- */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: #cccccc;
+    font-size: 1.05rem;
+}
+
+.about-text strong {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.about-photo-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.photo-profil-arch {
+    width: 100%;
+    max-width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 200px 200px 0 0; 
+    border: 2px solid var(--accent);
+}
+
+/* --- PROJETS --- */
+.projets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.projet-card {
+    display: flex;
+    align-items: stretch;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    min-height: 350px; 
+}
+
+.projet-img-container {
+    width: 35%; 
+    background-color: var(--bg-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+.projet-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.projet-info {
+    width: 65%; 
+    padding: 30px;
+    background-color: var(--bg-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projet-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.projet-info ul {
+    list-style-type: none;
+}
+
+.projet-info li {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.projet-info li strong {
+    color: var(--accent);
+}
+
+.projet-info li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+}
+
+/* --- COMPÉTENCES --- */
+.competences-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.comp-box {
+    background-color: var(--bg-light);
+    border: 1px solid var(--accent);
+    padding: 40px;
+    text-align: center;
+    width: 300px;
+}
+
+.comp-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.comp-box p {
+    font-size: 0.95rem;
+    color: #000000;
+}
+
+.comp-box-dark {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+.comp-box-dark p {
+    color: #ccc;
+}
+
+/* --- PARCOURS (TIMELINE HORIZONTALE) --- */
+.horizontal-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 25px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background-color: var(--accent);
+    z-index: 1;
+}
+
+.timeline-step {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 45%;
+}
+
+.timeline-step .dot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--bg-dark);
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+}
+
+.timeline-step .date {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.timeline-step p {
+    font-size: 0.9rem;
+}
+
+/* --- GALERIE --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+}
+
+.gallery-img:hover {
+    border: 2px solid var(--accent);
+}
+
+/* --- EN-TÊTE DE PAGES SECONDAIRES (Pour competences.html) --- */
+.page-header {
+    padding: 120px 10vw 60px 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- FOOTER --- */
+.footer-dark {
+    background-color: var(--bg-dark);
+    padding: 60px 10vw;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.contact-container p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.contact-container strong {
+    color: var(--accent);
+    font-family: var(--font-title);
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* --- ANIMATIONS (Fade In Scroll) --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 900px) {
+    .about-container { flex-direction: column; }
+    .hero { height: auto; padding: 100px 5vw; flex-direction: column; text-align: center; }
+    .giant-title { font-size: 2.8rem; }
+    .nav-links { display: none; }
+    .projets-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .tech-banner { flex-wrap: wrap; }
+    .projet-card { flex-direction: column; }
+    .projet-img-container, .projet-info { width: 100%; }
+}
+
+/* --- MINI FOOTER --- */
+.mini-footer {
+    background-color: var(--bg-dark);
+    color: #666;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* --- STYLE DU FORMULAIRE DE CONTACT --- */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; /* Centre le formulaire */
+    text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Ligne fine et semi-transparente */
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    resize: none; /* Empêche de redimensionner la zone de texte horizontalement */
+}
+
+/* Style du texte indicatif (placeholder) */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
+}
+
+/* Animation quand on clique sur un champ */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom: 1px solid #ffffff; /* La ligne devient blanche opaque */
+}
+
+/* Style du bouton d'envoi */
+.submit-btn {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 24px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-top: 1rem;
+    align-self: center; /* Centre le bouton */
+    border-radius: 0; /* Garde un aspect géométrique et strict */
+}
+
+/* Animation au survol du bouton */
+.submit-btn:hover {
+    background-color: #ffffff;
+    color: #000000; /* Le texte devient noir sur fond blanc */
+}
+
+/* --- BOUTON CV --- */
+.cv-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background-color: transparent;
+    
+    /* Les deux lignes modifiées pour le rose clair : */
+    color: #E8B4B8; 
+    border: 2px solid #E8B4B8;
+    
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cv-button:hover {
+    /* La couleur de fond au survol devient rose clair */
+    background-color: #E8B4B8; 
+    color: white; /* Le texte devient blanc au survol */
+    
+    /* L'ombre prend aussi une légère teinte rose */
+    box-shadow: 0 8px 20px rgba(232, 180, 184, 0.4); 
+    transform: translateY(-3px);
+}
+
+.cv-button i {
+    font-size: 18px;
+}

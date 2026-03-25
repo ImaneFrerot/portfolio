@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imane FREROT | Projets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo" style="text-decoration:none;">Imane FREROT.</a>
+        <div class="nav-links">
+            <a href="apropos.html">À Propos</a>
+            <a href="projets.html">Projets</a>
+            <a href="competences.html">Compétences</a>
+            <a href="parcours.html">Parcours</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="page-header section-silk">
+        <h1 class="giant-title center reveal">MES <span class="italic-velvet">PROJETS</span></h1>
+    </header>
+
+    <section class="section section-light">
+        <div class="projets-grid">
+            <div class="projet-card reveal">
+                <div class="projet-img-container"><img src="01.png" alt="S1.01"></div>
+                <div class="projet-info">
+                    <h3>SAÉ S1.01 (C++)</h3>
+                    <ul>
+                        <li>J'ai conçu une bibliothèque de données.</li>
+                        <li>J'ai organisé mon développement avec des fichiers <strong>.hpp</strong> et <strong>.cpp</strong> bien distincts.</li>
+                        <li>J'ai créé des <strong>constructeurs</strong> pour initialiser mes objets de manière sécurisée.</li>
+                        <li>J'ai appris à manipuler des algorithmes complexes pour traiter les informations efficacement.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="projet-card reveal">
+                <div class="projet-img-container"><img src="02.png" alt="S1.02"></div>
+                <div class="projet-info">
+                    <h3>SAÉ S1.02 (Comparaison d'algorithmes)</h3>
+                    <ul>
+                        <li>J'ai implémenté l'algorithme du <strong>tri à bulles</strong>.</li>
+                        <li>J'ai programmé l'algorithme du <strong>tri par insertion</strong>.</li>
+                        <li>J'ai automatisé la compilation avec un <strong>script Shell</strong>.</li>
+                        <li>J'ai testé l'efficacité sur plusieurs fichiers (<strong>.data</strong>).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="projet-card reveal">
+                <div class="projet-img-container"><img src="04.png" alt="S1.04"></div>
+                <div class="projet-info">
+                    <h3>SAÉ S1.04 (Création de BDD)</h3>
+                     <ul>
+                        <li>Analyse d'un cahier des charges pour concevoir le <strong>diagramme de classes</strong> d'une base de données relationnelle</strong>.</li>
+                        <li>Manipulation de <strong>requêtes SQL</strong> complexes pour extraire et vérifier la <strong>qualité</strong> des informations de la base.</li>
+                        <li>Apprentissage à utiliser des <strong>jointures</strong> et des <strong>fonctions d'agrégation</strong> pour répondre aux besoins du client.</li>
+                        <li>Création de <strong>scripts</strong> d'insertion et de mise à jour pour gérer les stocks et les commandes de l'entreprise.</li>
+                        <li>Structuration de mon travail pour assurer l'intégrité des données tout au long du projet.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="projet-card reveal">
+                <div class="projet-img-container"><img src="05.png" alt="S1.05"></div>
+                <div class="projet-info">
+                    <h3>SAÉ S1.05 (Recueil de besoins & Com)</h3>
+                    <ul>
+                        <li><strong>Conception</strong> et <strong>développement</strong> d'un <strong>site web complet</strong> présentant l'IUT d'Arles en utilisant HTML5 et CSS3.</li>
+                        <li>Réalisation d'un <strong>flyer publicitaire</strong> professionnel sur Canva en respectant une charte graphique précise.</li>
+                        <li>Apprentissage à <strong>recueillir</strong> et <strong>analyser</strong> les besoins d'un client pour proposer des solutions visuelles adaptées.</li>
+                        <li>Structuration de l'information de manière ergonomique pour <strong>faciliter</strong> la navigation des futurs étudiants sur le site.</li>
+                        <li>Travail sur l'identité visuelle pour rendre la <strong>communication</strong> de l'établissement plus moderne et attractive.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mini-footer">
+        <p>© 2024 Imane FREROT - Portfolio</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('show'); }); }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>

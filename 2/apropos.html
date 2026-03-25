@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imane FREROT | À Propos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo" style="text-decoration:none;">Imane FREROT.</a>
+        <div class="nav-links">
+            <a href="apropos.html">À Propos</a>
+            <a href="projets.html">Projets</a>
+            <a href="competences.html">Compétences</a>
+            <a href="parcours.html">Parcours</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="page-header section-silk">
+        <h1 class="giant-title center reveal">À <span class="italic-velvet">PROPOS</span></h1>
+    </header>
+
+    <section class="section section-dark">
+        <div class="about-container">
+            <div class="about-text reveal">
+                <h2 class="section-title-left">BIENVENUE CHEZ IMANE</h2>
+                <p>Étudiante en <strong>première année</strong> de <strong>BUT Informatique Parcours A</strong> , j'aime <strong>apprendre</strong> et découvrir de nouvelles choses, surtout dans tout ce qui touche au <strong>numérique</strong> et à la <strong>création</strong>.</p>
+                <p>J'ai toujours été passionnée par les technologies et la <strong>créativité</strong>, ce qui m'a naturellement orientée vers <strong>l'informatique</strong>. Je suis une personne<strong> sérieuse</strong>, <strong>créative</strong>, <strong>organisée</strong> et <strong>motivée</strong>.</p>
+            </div>
+            <a href="cv.pdf" target="_blank" class="cv-button">
+        <i class="fa-solid fa-download"></i> Consulter mon CV
+    </a>
+            <div class="about-photo-wrapper reveal">
+                <img src="photo_imane.jpg" alt="Imane" class="photo-profil-arch">
+            </div>
+        </div>
+    </section>
+
+    <footer class="mini-footer">
+        <p>© 2024 Imane FREROT - Portfolio</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('show'); }); }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>

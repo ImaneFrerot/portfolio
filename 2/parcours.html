@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imane FREROT | Parcours</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo" style="text-decoration:none;">Imane FREROT.</a>
+        <div class="nav-links">
+            <a href="apropos.html">À Propos</a>
+            <a href="projets.html">Projets</a>
+            <a href="competences.html">Compétences</a>
+            <a href="parcours.html">Parcours</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="page-header section-silk">
+        <h1 class="giant-title center reveal">MON <span class="italic-velvet">PARCOURS</span></h1>
+    </header>
+
+    <section class="section section-light" style="min-height: 50vh;">
+        <div class="horizontal-timeline reveal">
+            <div class="timeline-line"></div>
+            
+            <div class="timeline-step">
+                <div class="dot"></div>
+                <span class="date">2024 - 2025</span>
+                <p>TERMINALE GÉNÉRALE<br>Bac avec mention (Maths, NSI, LLCE)</p>
+            </div>
+
+            <div class="timeline-step">
+                <div class="dot"></div>
+                <span class="date">2025 - 2026</span>
+                <p>BUT INFORMATIQUE<br>Première année (IUT)</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mini-footer">
+        <p>© 2024 Imane FREROT - Portfolio</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('show'); }); }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>

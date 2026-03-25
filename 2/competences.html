@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imane FREROT | Compétences</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo" style="text-decoration:none;">Imane FREROT.</a>
+        <div class="nav-links">
+            <a href="apropos.html">À Propos</a>
+            <a href="projets.html">Projets</a>
+            <a href="competences.html">Compétences</a>
+            <a href="parcours.html">Parcours</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="page-header section-silk">
+        <h1 class="giant-title center reveal">MES <span class="italic-velvet">COMPÉTENCES</span></h1>
+    </header>
+
+    <div class="tech-banner reveal">
+        <span class="tech-title">Vu dans</span>
+        <div class="tech-icons">
+            <span>HTML/CSS</span>
+            <span>C++</span>
+            <span>SQL</span>
+            <span>Bash</span>
+            <span>Canva</span>
+        </div>
+    </div>
+
+    <section class="section section-light">
+        <div class="competences-container reveal">
+            <div class="comp-box">
+                <h3>TECHNIQUES</h3>
+                <p>HTML, CSS, Bash<br>C++, SQL</p>
+            </div>
+            <div class="comp-box">
+                <h3>OUTILS</h3>
+                <p>Canva, GitHub, VScode<br>Suite Office</p>
+            </div>
+            <div class="comp-box">
+                <h3>SOFT SKILLS</h3>
+                <p>Sérieuse, Créative<br>Organisée, Motivée</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mini-footer">
+        <p>© 2026 Imane FREROT - Portfolio</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('show'); }); }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
