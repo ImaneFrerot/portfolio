@@ -539,3 +539,27 @@ h1, h2, h3 {
 .cv-button i {
     font-size: 18px;
 }
+
+/* Conteneur de chaque élément de la galerie */
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligne le texte à gauche sous l'image */
+}
+
+/* On s'assure que l'image garde ses propriétés */
+.gallery-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 8px; /* Espace entre l'image et le texte */
+}
+
+/* Style du texte de localisation */
+.gallery-location {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: #666;
+    text-transform: uppercase; /* Optionnel : pour un look plus "édito" */
+    letter-spacing: 1px;
+}
